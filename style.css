@@ -1,0 +1,98 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#calculatorTitle {
+    font-size: 2em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #000;
+    letter-spacing: 2px;
+    color: #000;
+    background-color: #fff;
+    text-align: center;
+}
+
+#calculatorBody {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 0;
+    box-shadow: 0 0 0 3px #000;
+}
+
+#calculatorDisplay {
+    font-size: 3em;
+    width: 300px;
+    height: 70px;
+    background-color: #f0f0f0;
+    text-align: right;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #000;
+    color: #000;
+    font-weight: bold;
+}
+
+#calculatorButtonsPad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    width: 340px;
+}
+
+button {
+    background-color: #fff;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 1.5em;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0;
+    transition: background-color 0.3s, color 0.3s;
+    text-transform: uppercase;
+}
+
+button:hover, button.operator:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+button:active, button.operator:active {
+    background-color: #666;
+    color: #fff;
+}
+
+button.clear, button.sign, button.percent {
+    font-weight: bold;
+}
+
+button.number {
+    font-weight: normal;
+}
+
+button.operator {
+    background-color: #fff;
+    color: #000;
+}
