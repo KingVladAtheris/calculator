@@ -123,7 +123,11 @@ function performOperation(num1, num2, operator) {
     }
 
     // Set max decimal result 2 digits
-    result = result.toFixed(2);
+    if (result % 1 !== 0) {
+        result = result.toFixed(2); 
+    } else {
+        result = result.toString(); 
+    }
 
     // Result over 9 digits
     if (result.length > MAX_DIGITS) {
